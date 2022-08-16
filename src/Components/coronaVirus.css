@@ -1,0 +1,61 @@
+body {
+  background-color: #918e8e8a;
+  font-family: Lato, sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 5px;
+  padding: 11px;
+}
+
+@media (max-width: 730px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.virusDetailsDisplay {
+  border-radius: 50%;
+  margin-left: 84%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.countryName,
+.countryPopulation {
+  color: white;
+}
+
+.countryName {
+  text-transform: uppercase;
+}
+
+.cardStyle {
+  padding: 5px 10px;
+  border: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 11px 5px #6f3d51;
+  transition: 0.5s;
+}
+
+.searchFiled {
+  padding: 13px 81px;
+  font-size: 18px;
+  color: #333;
+}
+
+.search {
+  text-align: center;
+  padding: 15px 30px;
+}

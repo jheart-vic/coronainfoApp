@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.css';
+import './Components/coronaVirus.css'
+import './Components/coronavirusdetails.css'
 import {  Route, Routes } from 'react-router-dom';
-
-import Header from './Components/Header'
+ import Header from './Components/Header'
 import CoronaVirusDetails from './Components/CoronaVirusDetails';
 import CoronaVirus from './Components/CoronaVirus';
 
@@ -12,14 +13,14 @@ class App extends React.Component {
     return (
   
       <>
-        <Header />
+        <Header /> 
 
         <div >
 
           <Routes>
             <Route path="/" exact element={<CoronaVirus />} />
-            {/* <Route index element={<CoronaVirus />} /> */}
             <Route path="/CoronaVirusDetails/:code" element={<CoronaVirusDetails />} />
+            
           </Routes>
 
         </div>

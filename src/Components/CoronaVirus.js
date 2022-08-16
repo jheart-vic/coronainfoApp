@@ -6,29 +6,34 @@ import Search from './SearchInput';
 
 
 function CoronaVirus () {
+  const dispatch = useDispatch();
   const countries = useSelector(state => state.country.countries);
   const [countriesToRender, setCountriesToRender] = useState(countries) 
-  const dispatch = useDispatch();
  
-  
   useEffect(() => {
     dispatch(getCountries())
+  }, [dispatch]);
+
+  useEffect(() => {
     setCountriesToRender(countries)
-  }, [dispatch, countries])
- 
+  }, [countries]);
+
 
   return (
-    <>
-         <ul>
-        <Search Country={countries} setCountries={setCountriesToRender} />
+ <div>
+   <Search Country={countries} setCountries={setCountriesToRender} />
+    <div className='wrapper'>
+      
+     
         {
-        setCountriesToRender?.data?.map(country =>(
+         countriesToRender?.data?.map(country =>(
           <CoronaVirusList key={country.code} country={country}/>
           ))
-        }
-      </ul>
 
-     </>
+        }
+ </div>
+     </div>
+     
   );
 }
 

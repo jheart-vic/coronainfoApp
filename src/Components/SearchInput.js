@@ -3,9 +3,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function Search({ setCountries, Country }) {
   const handleSearch = (e) => {
-    setCountries(Country.data.filter((listOfCountries) => (
+    setCountries({data: Country.data.filter((listOfCountries) => (
       listOfCountries.name.toLowerCase().includes(e.target.value.toLowerCase())
-      )));
+      ))});
   };
 
   return (
